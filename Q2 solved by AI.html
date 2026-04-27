@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIU CareerHub</title>
+    <style>
+        /* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6fb; /* Background color from image */
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9bb7dc; /* Logo color from tag */
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.btn-post {
+    background-color: #205bcb; /* Apply button/Header btn color */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Layout Container */
+.container {
+    display: flex;
+    padding: 30px 50px;
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.sidebar label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    cursor: pointer;
+}
+
+.btn-apply-filters {
+    width: 100%;
+    background-color: #205bcb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results-count {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Job Cards */
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-left: 4px solid #333; /* Sidebar accent */
+}
+
+.job-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.company {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Colors from annotations */
+.full-time, .remote { background-color: #e2ebfa; color: #205bcb; }
+.onsite { background-color: #d6f2e7; color: #2e7d32; }
+.internship { background-color: #fdebc0; color: #856404; }
+
+/* Right side of card */
+.job-meta {
+    text-align: right;
+}
+
+.salary {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.deadline {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.btn-apply {
+    background-color: #205bcb;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">UIU CareerHub</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Jobs</a>
+            <a href="#">Internships</a>
+            <a href="#">Companies</a>
+            <a href="#">Resources</a>
+            <button class="btn-post">+ Post a Job</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            
+            <div class="filter-group">
+                <div class="filter-header">Job Type <span>^</span></div>
+                <label><input type="checkbox" checked> Full-time</label>
+                <label><input type="checkbox"> Part-time</label>
+                <label><input type="checkbox"> Internship</label>
+                <label><input type="checkbox"> Remote</label>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header">Department <span>^</span></div>
+                <label><input type="checkbox" checked> Software Engineering</label>
+                <label><input type="checkbox"> Data Science</label>
+                <label><input type="checkbox"> UI/UX Design</label>
+                <label><input type="checkbox"> Networking</label>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header">Experience <span>^</span></div>
+            </div>
+
+            <button class="btn-apply-filters">Apply Filters</button>
+        </aside>
+
+        <section class="content">
+            <div class="content-header">
+                <h2>Available Positions</h2>
+                <span class="results-count">Showing 3 of 23 jobs</span>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Junior Software Engineer</h3>
+                    <p class="company">Kaz Software</p>
+                    <div class="tags">
+                        <span class="tag full-time">Full-time</span>
+                        <span class="tag onsite">Onsite - Dhaka</span>
+                    </div>
+                </div>
+                <div class="job-meta">
+                    <p class="salary">৳ 35,000 - 50,000</p>
+                    <p class="deadline">Deadline: Dec 30, 2025</p>
+                    <button class="btn-apply">Apply</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Data Analyst Intern</h3>
+                    <p class="company">bKash Limited</p>
+                    <div class="tags">
+                        <span class="tag internship">Internship</span>
+                        <span class="tag onsite">Onsite - Dhaka</span>
+                    </div>
+                </div>
+                <div class="job-meta">
+                    <p class="salary">৳ 15,000 / month</p>
+                    <p class="deadline">Deadline: Jan 15, 2020</p>
+                    <button class="btn-apply">Apply</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-info">
+                    <h3>Frontend Developer</h3>
+                    <p class="company">Palhau Inc.</p>
+                    <div class="tags">
+                        <span class="tag full-time">Full-time</span>
+                        <span class="tag remote">Remote</span>
+                    </div>
+                </div>
+                <div class="job-meta">
+                    <p class="salary">৳ 45,000 - 70,000</p>
+                    <p class="deadline">Deadline: Jan 5, 2025</p>
+                    <button class="btn-apply">Apply</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
